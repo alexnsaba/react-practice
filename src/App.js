@@ -1,11 +1,17 @@
 import './App.css';
-import ComponentDemo from './components/ComponentDemo';
-import ComponentDemoTwo from './components/ComponentDemoTwo';
+import Products from './components/Products';
+import Main from './components/Main';
+import Footer from './components/Footer';
+
+const buses = [{"id":1,"name":"Jaguar","src":"jaguar.png"},{"id":2,"name":"Mash","src":"mash.png"},{"id":3,"name":"Trinity","src":"trinity.png"}];
+
 function App() {
   return (
     <div className="App">
-      <ComponentDemo/>
-      <ComponentDemoTwo day="monday"/>
+      <Main product="Buses"/>
+      <Products products={buses}/>
+
+      <Footer year={new Date().getFullYear()} />
     </div>
   );
 }
